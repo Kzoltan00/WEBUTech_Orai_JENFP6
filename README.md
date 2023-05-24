@@ -1,2 +1,2 @@
-# WEBUTech_Orai_JENFP6
+# WEBTech_Orai_JENFP6
 Kapusi Zoltán - JENFP6

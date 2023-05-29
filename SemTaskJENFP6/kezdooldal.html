@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>Tantárgyak tematikája</title>
+    <style>
+
+
+        /* CSS stílusok */
+
+
+
+    
+        title {
+            text-align: center;
+        }
+
+        /* Általános testreszabása */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(kepek/hatter.jpg); /* Háttérkép beállítása */
+            background-size: cover;
+            background-position: top;
+        }
+
+
+
+        /* Fejléc stílusa */
+
+
+        header {
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+
+
+        /* Navigációs menü stílusa */
+
+
+        nav {
+            color: transparent;
+            display: flex;
+            justify-content: flex-start; /*  balra igazítás */
+            font-size: xx-large;
+            border: 1px solid black; /*  vékony fekete keret */
+        }
+
+        nav ul {
+            list-style-type: decimal; /* megszámozott felsorolás */
+            padding-left: 20px; /* belső behúzás */
+        }
+
+        nav ul li {
+            margin-bottom: 10px; /* elemek közötti térköz */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: underline;
+        }
+
+
+
+        /* Fő tartalom stílusa */
+
+
+        main {
+            padding-left: 30%;
+            padding-right: 30%;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        main2 {
+            padding-left: 30%;
+            padding-right: 30%;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+
+
+
+        /* Lábléc stílusa */
+
+
+        footer {
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+
+
+        /* Táblázat stílusa */
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.5); /* félig áttetsző háttér */
+            color: black; /* fekete szöveg */
+        }
+
+
+
+        /* Csütörtök négyzetei */
+
+
+        td.thursday {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fejléc -->
+    <header>
+        <h1>Tantárgyak tematikája weboldal</h1>
+        <a href="https://www.uni-miskolc.hu" target="ujablak"><img src="kepek/header.jpg" height="200px" alt="Fejléc kép"></a>
+    </header>
+    
+    <!-- Navigációs menü -->
+    <nav>
+        <ul>
+            <li><a href="elsotargy.html">1. Web technológiák</a></li>
+            <li><a href="masodiktargy.html">2. Ipari kommunikációs és SCADA rendszerek I</a></li>
+            <li><a href="harmadiktargy.html">3. Komplex tervezés</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fő tartalom -->
+    <main>
+        <h2 style="text-decoration: underline;">Kezdőlap</h2>
+        <p>Üdvözöllek a tantervi weblapomon.<br>
+            Ezen az oldalon információkat találhatsz meg három általam kiválasztott tárgyról.
+        </p>
+        <ul style="font-weight: bold;">
+            <li>Tárgy leírása</li>
+            <li>Tárgyat oktató tanár(ok)</li>
+            <li>Tárgy weboldala</li>
+        </ul>
+
+        <h3 style="text-decoration: underline; color:rgb(88, 33, 52);">Órarend</h3>
+        <table>
+            <tr>
+                <th>Idő</th>
+                <th>Hétfő</th>
+                <th>Kedd</th>
+                <th>Szerda</th>
+                <th>Csütörtök</th>
+            </tr>
+            <tr>
+                <td>8-10</td>
+                <td>Web technológiák</td>
+                <td>Processzortechnika</td>
+                <td></td>
+                <td class="thursday"></td>
+            </tr>
+            <tr>
+                <td>10-12</td>
+                <td>Web technológiák</td>
+                <td>Scada</td>
+                <td></td>
+                <td class="thursday"></td>
+            </tr>
+            <tr>
+                <td>12-14</td>
+                <td>Terepi műszerezés</td>
+                <td>Scada</td>
+                <td>AutoElektro</td>
+                <td class="thursday"></td>
+            </tr>
+            <tr>
+                <td>14-16</td>
+                <td>Terepi műszerezés</td>
+                <td>Vezetés szervezés</td>
+                <td>Termelői rendszerek</td>
+                <td class="thursday"></td>
+            </tr>
+            <tr>
+                <td>16-18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="thursday"></td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Videó és vezérlő gombok -->
+    <main2>
+        <video id="videom" width="720" controls>
+            <source src="kepek/indexvideo.mp4" type="video/mp4">
+            A böngésződ nem támogatja a HTML videók lejátszását.
+        </video>
+        <br /><br />
+        <button onClick="videom.play()">indítás</button>
+        <button onClick="videom.pause()">leállítás</button>
+        &nbsp;&nbsp;&nbsp;
+
+        <br /><br />
+        <button onClick="videom.volume=0">néma</button>
+        <button onClick="videom.volume=0.2">halk</button>
+        <button onClick="videom.volume=1">hangos</button>
+    </main2>
+
+    <!-- Lábléc -->
+    <footer>
+        Készítette: Kapusi Zoltán JENFP6 <br>
+    </footer>
+</body>
+</html>
